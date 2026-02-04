@@ -3,12 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/flower.css" />
+    <title>Be My Valentine</title>
+    <link rel="stylesheet" href="css/valentine.css" />
   </head>
   <body>
-    <div id="thankyou"><b>Thank you for being my Valentine</b></div>
+    <div id="valentineQuestion"><b>Thank you for being my Valentine❤️❤️❤️</b></div>
     <br />
-    <img src="Theend.jpeg" height="720px" width="600px" alt="cat asking question" class="responsive" />
+    <img src="Theend.jpeg" height="498px" width="150px" alt="cat asking question" class="responsive" />
+
+    <script>
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.querySelector(
+            'button[onclick*="thankyou.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
+        });
+    </script>
   </body>
 </html>
